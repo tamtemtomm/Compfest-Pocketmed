@@ -1,0 +1,49 @@
+:root {
+    --color1: #faefca;
+    --color2: #ddc696;
+    --color3: #4ab097;
+    --color4: #464d78;
+    --color5: #6ba3c3;
+    --color6: #faefca;
+  }
+  
+  * {
+    margin: 0;
+  }
+  
+  body {
+    font-family: "Open Sans";
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  .header-container {
+    height: 4.5rem;
+    background-color: var(--color3);
+    display: flex;
+    padding: 0 2rem;
+    color: white;
+    align-items: center;
+  }
+  
+  .header-title {
+    font-size: 2rem;
+    cursor: default;
+  }
+  
+  .header-submenu {
+    font-size: 1.2rem;
+    display: flex;
+    gap: 6rem;
+    width: 100%;
+    list-style: none;
+    justify-content: end;
+    padding-right: 2rem;
+  }
+  
+  .header-submenu > *:hover {
+    text-shadow: 0 0 20px #fff;
+    cursor: pointer;
+  }
