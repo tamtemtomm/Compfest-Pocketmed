@@ -1,6 +1,6 @@
 from flask import Flask, render_template, url_for, request
 from utils import SkinDiagnosis
-from config_path import skinmodel1_path, skinmodel2_path, skinmodel3_path, skindisease_step_path, skinlabel_decode_path
+from config_path import SKINMODEL1_PATH, SKINMODEL2_PATH, SKINMODEL3_PATH, SKINDISEASE_STEP_PATH, SKINLABEL_DECODE_PATH
 
 app = Flask(__name__)
 
@@ -14,13 +14,13 @@ def main():
 def upload():
     if request.method == 'POST':
         img = request.files["image"]
-        img_path = "static/img/" + img.filename
-        img.save(img_path)
+        IMG_PATH = "static/img/" + img.filename
+        img.save(IMG_PATH)
 
-        output = SkinDiagnosis(img_path, skinmodel1_path, skinmodel2_path,
-                               skinmodel3_path, skinlabel_decode_path, skindisease_step_path)
+        output = SkinDiagnosis(IMG_PATH, SKINMODEL1_PATH, SKINMODEL2_PATH,
+                               SKINMODEL3_PATH, SKINLABEL_DECODE_PATH, SKINDISEASE_STEP_PATH)
         disease, link, details = output
-        return render_template("index2.html", disease=disease, link=link, details=details, img=img_path)
+        return render_template("index2.html", disease=disease, link=link, details=details, img=IMG_PATH)
 
 
 if __name__ == "__main__":
