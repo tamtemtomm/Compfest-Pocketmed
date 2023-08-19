@@ -1,0 +1,5 @@
+torch==1.13.1
+torchvision==0.14.1
+gradio==3.39.0
+gradio_client==0.3.0
+Flask==2.2.3
