@@ -1,49 +1,109 @@
 :root {
-    --color1: #faefca;
-    --color2: #ddc696;
-    --color3: #4ab097;
-    --color4: #464d78;
-    --color5: #6ba3c3;
-    --color6: #faefca;
-  }
-  
-  * {
-    margin: 0;
-  }
-  
-  body {
-    font-family: "Open Sans";
-  }
-  
-  .hidden {
-    display: none;
-  }
-  
+  --color1: #faefca;
+  --color2: #ddc696;
+  --color3: #4ab097;
+  --color4: #464d78;
+  --color5: #6ba3c3;
+  --color6: #faefca;
+}
+
+* {
+  margin: 0;
+  padding:0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans";
+}
+
+.hidden {
+  display: none;
+}
+
+.rotated {
+  transform: rotate(90deg); /* Rotate by 45 degrees */
+}
+
+.header-container {
+  height: 4.5rem;
+  background-color: var(--color3);
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.header-title {
+  color: white;
+  font-size: 2rem;
+  padding: 0 2em;
+  cursor: default;
+  min-width: 400px;
+}
+
+.header-submenu {
+  margin-left: auto;
+  margin-right: 40px;
+  display: grid;
+  gap: 5em;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.header-submenu-li{
+  display: inline-block;
+  margin: 0 5px;
+  color: white;
+  font-size: 1.1em;
+  font-weight: 500;
+}
+
+.header-submenu > *:hover {
+  text-shadow: 0 0 20px #fff;
+  cursor: pointer;
+}
+
+
+@media (max-width: 800px) {
   .header-container {
-    height: 4.5rem;
-    background-color: var(--color3);
+    position: relative;
     display: flex;
-    padding: 0 2rem;
-    color: white;
-    align-items: center;
+    height: 8rem;
   }
-  
-  .header-title {
-    font-size: 2rem;
-    cursor: default;
+
+  .svg-container{
+    position: absolute;
+    height: 2.3em;
+    width: 2.3em;
+    right: 4.4em;
   }
-  
+
   .header-submenu {
-    font-size: 1.2rem;
-    display: flex;
-    gap: 6rem;
+    grid-template-columns: none;
+    grid-template-rows: repeat(3, 1fr);
+    font-weight: 500;
+    text-align: center;
+    margin-top: 12rem;
+    gap: 2em;
+    background-color: var(--color3);
+    padding: 1em;
+  }
+
+  .header-submenu-li{
+    /* display: inline-block;   */
+    color: white;
+    font-size: .9em;
+    font-weight: 500;
+  }
+
+  .svg-container >  svg{
+    position: inherit;
+    display: block;
     width: 100%;
-    list-style: none;
-    justify-content: end;
-    padding-right: 2rem;
-  }
-  
-  .header-submenu > *:hover {
-    text-shadow: 0 0 20px #fff;
+    height: 100%;
+    margin-left: auto;
     cursor: pointer;
+    transition: transform 0.3s ease;
   }
+}
