@@ -62,7 +62,7 @@ class SkinDiseaseModelResnet(nn.Module):
   def __init__(self, num_class):
     super().__init__()
     self.num_class = num_class
-    self.resnet =  resnet50(weights="ResNet50_Weights.IMAGENET1K_V1")
+    self.resnet =  resnet50(weights="ResNet50_Weights.IMAGENET1K_V2")
     self.linearblock = nn.Sequential(
         LinearBlock(1000, 750),
         LinearBlock(750, 500),
