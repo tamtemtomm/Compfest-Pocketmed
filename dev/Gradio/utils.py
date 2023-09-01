@@ -7,7 +7,7 @@ from config_path import SKINMODEL1_PATH, SKINMODEL2_PATH, SKINMODEL3_PATH, SKIND
 def diagnosis(img):
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
     
-    img = transform_img(img)
+    img = transform_img(img).to(device=device)
     
     # Setup disease step
     disease_to_link, disease_to_step = read_disease_step(SKINDISEASE_STEP_PATH)
