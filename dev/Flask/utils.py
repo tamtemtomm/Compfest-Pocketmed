@@ -5,12 +5,11 @@ from config import read_disease_step, read_label_decode, transform_img
 
 
 def SkinDiagnosis(img_path, model1_path, model2_path, model3_path, label_decode_path, disease_step_path):
-
-    # Read Images
-    img = transform_img(img_path)
-
     # Setup device
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+    
+    # Read Images
+    img = transform_img(img_path).to(device)
 
     # Setup disease step
     disease_to_link, disease_to_step = read_disease_step(disease_step_path)
