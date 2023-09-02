@@ -13,6 +13,8 @@ Pocketmed is a tool to check diseases from images. User can check skin and eye h
 
 3. Have Fun!
 
+## You can also check our HuggingSpace space in this [link]("https://xmaulana-compfest-pocketmed.hf.space/")
+
 ## Installation and usage instructions (for contributors)
 
 1. Clone this repository. You can copy this code to your terminal
@@ -36,7 +38,6 @@ Pocketmed is a tool to check diseases from images. User can check skin and eye h
     cd .\Flask
     python app.py
     ```
-
 ## Documentation
 ### Model Training Stage
 Here we provide some link that explain about the training stage of the model.
