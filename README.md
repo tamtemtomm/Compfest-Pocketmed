@@ -13,7 +13,7 @@ Pocketmed is a tool to check diseases from images. User can check skin and eye h
 
 3. Have Fun!
 
-4. You can also check our HuggingSpace space in this [link]("https://xmaulana-compfest-pocketmed.hf.space/"), so you dont have to run it by yourself in google colab or your personal computer.
+4. You can also check our HuggingSpace space in this [link](https://xmaulana-compfest-pocketmed.hf.space/), so you dont have to run it by yourself in google colab or your personal computer.
 
 ## Installation and usage instructions (for contributors)
 
