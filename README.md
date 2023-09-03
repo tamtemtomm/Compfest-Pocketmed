@@ -1,6 +1,7 @@
 # Pocketmed
-Pocketmed is a tool to check diseases from images. User can check skin and eye health by upload photo into the application<br>
+Pocketmed is a tool to check diseases from images. User can check skin and eye health by upload photo into the application.<br><br>
 See also our huggingface space for demo on this [link](https://xmaulana-compfest-pocketmed.hf.space/)
+<br>
 ## How to Use?
 
 1. You can use this [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/16kHxAnUV35AvUCunFFaapUP9eNnCxCFk?usp=sharing) notebook to run the program remotely
@@ -46,7 +47,7 @@ See also our huggingface space for demo on this [link](https://xmaulana-compfest
     streamlit run Cek_Kulit.py
     ```
     You must configure <API_KEY> on your env to use virtual doctor in this demo.
-    
+
 ## Documentation
 ### Model Training Stage
 Here we provide some link that explain about the training stage of the model.
