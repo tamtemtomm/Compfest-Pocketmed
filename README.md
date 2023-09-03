@@ -1,6 +1,6 @@
 # Pocketmed
 Pocketmed is a tool to check diseases from images. User can check skin and eye health by upload photo into the application.<br><br>
-See also our huggingface space for demo on this [link](https://xmaulana-compfest-pocketmed.hf.space/)
+See also our huggingface space for demo on this [link](https://xmaulana-compfest-pocketmed.hf.space/).
 <br>
 ## How to Use?
 
