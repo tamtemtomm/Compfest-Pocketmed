@@ -61,7 +61,7 @@ Here we provide some link that explain about the training stage of the model.
 
 ## Known issues (On Development!)
 1. Flask UI still don't responsive with user's device
-2. Chatbot system is not working
+2. Chatbot system is not working (except for streamlit version)
 3. Model's accuracy still a bit bad
 
 Thank you for coming in!
