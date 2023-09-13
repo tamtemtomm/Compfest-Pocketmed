@@ -2,6 +2,8 @@ import os
 import torch
 from skinmodels import IsSkinResnet, IsHealthySkinResnet, SkinDiseaseModelResnet
 from config import read_disease_step, read_label_decode, transform_img
+import openai
+import time
 from config_path import SKINMODEL1_PATH, SKINMODEL2_PATH, SKINMODEL3_PATH, SKINDISEASE_STEP_PATH, SKINLABEL_DECODE_PATH
 
 def diagnosis(img):
@@ -46,3 +48,35 @@ def diagnosis(img):
     disease = model3(img).argmax().item()
 
     return label_decode[disease], disease_to_link[label_decode[disease]], disease_to_step[label_decode[disease]]
+
+
+def getMessage(msg):
+    try:
+        openRespon = openai.ChatCompletion.create(
+        model="gpt-3.5-turbo",
+            messages=msg,
+            temperature=0.5
+            )
+        reply = openRespon.choices[0].message.content
+        return reply
+    except openai.error.RateLimitError:
+        return "Dokter saat ini sedang sibuk, tolong tunggu beberapa saat lagi"
+    except:
+        return "Maaf, sepertinya dokter tidak bisa menjawab saat ini. Silahkan refresh halaman. Jika masalah masih terus berlanjut, silahkan hubungi admin"
+
+last_apikey_check = int(round(time.time()*1000))-35*1000
+def cekApikey():
+    try:
+        global last_apikey_check
+        t_stamp = int(round(time.time())*1000)
+        if((t_stamp-last_apikey_check) > 30*1000):
+            openRespon = openai.ChatCompletion.create(
+                model="gpt-3.5-turbo",
+                messages=[{"role" : "user", "content": "i"}],
+                temperature=0.5
+                )
+            last_apikey_check = t_stamp
+        return True
+    except Exception as err:
+        print(err)
+        return False

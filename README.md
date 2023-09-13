@@ -1,6 +1,8 @@
 # Pocketmed
-Pocketmed is a tool to check diseases from images. User can check skin and eye health by upload photo into the application
-
+![WhatsApp Image 2023-09-03 at 15 39 01](https://github.com/tamtemtomm/Compfest-Pocketmed/assets/92860332/eb1b4b31-ac63-4325-9de6-a45ce2f6d70a)
+Pocketmed is a tool to check diseases from images. User can check skin and eye health by upload photo into the application.<br><br>
+See also our huggingface space for demo on this [link](https://xmaulana-compfest-pocketmed.hf.space/).
+<br>
 ## How to Use?
 
 1. You can use this [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/16kHxAnUV35AvUCunFFaapUP9eNnCxCFk?usp=sharing) notebook to run the program remotely
@@ -12,6 +14,8 @@ Pocketmed is a tool to check diseases from images. User can check skin and eye h
 ![alt text](https://github.com/tamtemtomm/Compfest-Pocketmed/assets/92860332/6bf525a3-9674-4350-9079-57a535e20601)
 
 3. Have Fun!
+
+4. You can also check our HuggingSpace space in this [link](https://xmaulana-compfest-pocketmed.hf.space/), so you dont have to run it by yourself in google colab or your personal computer.
 
 ## Installation and usage instructions (for contributors)
 
@@ -36,6 +40,14 @@ Pocketmed is a tool to check diseases from images. User can check skin and eye h
     cd .\Flask
     python app.py
     ```
+6. For streamlit demo, executes this command:
+   <br> <br>
+   ```rb
+    cd .\dev
+    cd .\Streamlit
+    streamlit run Cek_Kulit.py
+    ```
+    You must configure <API_KEY> on your env to use virtual doctor in this demo.
 
 ## Documentation
 ### Model Training Stage
@@ -49,7 +61,7 @@ Here we provide some link that explain about the training stage of the model.
 
 ## Known issues (On Development!)
 1. Flask UI still don't responsive with user's device
-2. Chatbot system is not working
+2. Chatbot system is not working (except for streamlit version)
 3. Model's accuracy still a bit bad
 
 Thank you for coming in!

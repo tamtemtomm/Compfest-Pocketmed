@@ -3,6 +3,6 @@ torchvision==0.14.1
 gradio==3.39.0
 gradio_client==0.3.0
 Flask==2.2.3
-streamlit==1.26.0
+streamlit==1.25.0
 openai==0.28.0
 python-dotenv==1.0.0

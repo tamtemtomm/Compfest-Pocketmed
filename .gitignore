@@ -1,0 +1,7 @@
+dev/tools
+*.zip
+*.pth
+.env
+*env
+*.pyc
+*pyc
