@@ -1,6 +1,7 @@
 # Pocketmed
+![WhatsApp Image 2023-09-03 at 15 39 01](https://github.com/tamtemtomm/Compfest-Pocketmed/assets/92860332/eb1b4b31-ac63-4325-9de6-a45ce2f6d70a)
 Pocketmed is a tool to check diseases from images. User can check skin and eye health by upload photo into the application.<br><br>
-See also our huggingface space for demo on this [link](https://xmaulana-compfest-pocketmed.hf.space/)
+See also our huggingface space for demo on this [link](https://xmaulana-compfest-pocketmed.hf.space/).
 <br>
 ## How to Use?
 
@@ -60,7 +61,7 @@ Here we provide some link that explain about the training stage of the model.
 
 ## Known issues (On Development!)
 1. Flask UI still don't responsive with user's device
-2. Chatbot system is not working
+2. Chatbot system is not working (except for streamlit version)
 3. Model's accuracy still a bit bad
 
 Thank you for coming in!
